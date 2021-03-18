@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo Instructions to configure GUI:
 echo Install Gnome extensions plugin for Firefox
 echo Install Arcmenu extension
 echo Install Transparent top bar extension
