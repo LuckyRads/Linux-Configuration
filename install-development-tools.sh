@@ -6,6 +6,7 @@ echo Vim
 echo Postman
 echo JRE
 echo Eclipse
+echo Tor
 echo
 echo Install manually:
 echo GitAhead
@@ -15,3 +16,4 @@ sudo apt install vim
 sudo snap install postman
 sudo apt install default-jre
 sudo snap install --classic eclipse
+sudo apt install tor
