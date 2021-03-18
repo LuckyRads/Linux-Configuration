@@ -18,6 +18,19 @@ echo Applications: Mojave-dark
 echo Cursor: Yaru
 echo Icons: Papirus-Dark
 echo Sound: Yaru
+echo
+echo Dock icons
+echo Firefox
+echo Files
+echo Ubuntu Software
+echo System Monitor
+echo Terminal
+echo Trash
+echo Applications
+echo
+echo Shortcuts
+echo System Monitor (ctrl + shift + esc)
+echo Suspend (ctrl + super + alt + s)
 
 # Fonts
 echo Installing fonts
