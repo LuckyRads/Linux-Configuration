@@ -20,8 +20,7 @@ echo Sound: Yaru
 
 # Fonts
 echo Installing fonts
-mkdir ~/.fonts
-cp -r ./.fonts/* ~/.fonts/
+sudo apt install fonts-roboto
 
 # Themes
 echo Installing themes and icon packs
