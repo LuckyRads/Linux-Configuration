@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=GitAhead
+Icon=gitahead
+Terminal=false
+Exec=/usr/local/bin/GitAhead
+Categories=Development;RevisionControl;
