@@ -7,7 +7,7 @@ echo Postman
 echo JRE
 echo Eclipse
 echo Tor
-echo GitAhead (could need user intervention)
+echo GitAhead could need user intervention
 
 sudo snap install --classic code
 sudo apt install vim
@@ -15,6 +15,7 @@ sudo snap install postman
 sudo apt install default-jre
 sudo snap install --classic eclipse
 sudo apt install tor
+sudo apt install torbrowser-launcher
 
 # GitAhead installation
 sudo cp ./GitAhead*.sh /opt
