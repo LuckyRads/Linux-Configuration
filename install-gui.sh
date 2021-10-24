@@ -8,6 +8,7 @@ echo Install Multi monitors add-on extension
 echo Install Sound input \& output device chooser extension
 echo Configure Ubuntu dock with dconf editor
 echo Configure Arcmenu extension with gnome-tweak-tools
+echo gTile Gnome extension for window management
 echo
 echo Font settings
 echo Interface Text: Roboto Regular
