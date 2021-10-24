@@ -9,7 +9,7 @@ echo Install Sound input \& output device chooser extension
 echo Configure Ubuntu dock with dconf editor
 echo Configure Arcmenu extension with gnome-tweak-tools
 echo gTile Gnome extension for window management
-echo gTile add 4x4 grid
+echo gTile add 2x2 4x4 grids
 echo gTile set window margin to 5
 echo
 echo Font settings
