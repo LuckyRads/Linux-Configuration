@@ -19,6 +19,7 @@ echo Colors: use colors from system theme
 echo Transparent background set to 0.90
 echo Layout set terminal to created custom profile
 echo Add keybindings to switch to tabs (alt + numbers)
+echo Copy from functions comment to the EOF https://raw.githubusercontent.com/ChrisTitusTech/scripts/master/fancy-bash-promt.sh and paste it in .bashrc file
 
 
 sudo apt update
