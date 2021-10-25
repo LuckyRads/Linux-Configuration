@@ -8,7 +8,7 @@ echo Configure GRUB dual boot
 echo /etc/default/grub
 echo GRUB_DEFAULT=saved
 echo GRUB_SAVEDEFAULT=true
-echo GRUB_TIMEOUT_STYLE=hidden
+echo GRUB_TIMEOUT_STYLE=menu
 echo GRUB_TIMEOUT=10
 echo Legion5 specific: GRUB_CMDLINE_LINUX_DEFAULT="queit splash
  acpi_backlight=intel acpi_osi=linux"
