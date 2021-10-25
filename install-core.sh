@@ -13,10 +13,17 @@ echo GRUB_TIMEOUT=10
 echo Legion5 specific: GRUB_CMDLINE_LINUX_DEFAULT="queit splash
  acpi_backlight=intel acpi_osi=linux"
 echo Legion5 specific: change to Dedicated graphics in bios in order for the brightness control to work
+echo Terminator terminal
+echo New profile
+echo Colors: use colors from system theme
+echo Transparent background set to 0.90
+echo Layout set terminal to created custom profile
+echo Add keybindings to switch to tabs (alt + numbers)
+
 
 sudo apt update
 
 sudo apt install gnome-tweak-tool
 sudo apt install hardinfo
 sudo apt install dconf-editor
-
+sudo apt install terminator
