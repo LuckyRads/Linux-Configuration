@@ -4,6 +4,7 @@ echo Installation content:
 echo Gnome tweak tools
 echo Hardware information
 echo Dconf editor
+echo Ranger terminal file manager
 
 echo Configure GRUB dual boot
 echo /etc/default/grub
@@ -27,3 +28,4 @@ sudo apt install gnome-tweak-tool
 sudo apt install hardinfo
 sudo apt install dconf-editor
 sudo apt install terminator
+sudo apt install ranger
