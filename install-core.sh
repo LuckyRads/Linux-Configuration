@@ -4,7 +4,11 @@ echo Installation content:
 echo Gnome tweak tools
 echo Hardware information
 echo Dconf editor
+
 echo Ranger terminal file manager
+echo Configure ranger file manager
+echo Copy rc.conf from repository and paste it to ~/.config/ranger/
+echo This file contains all ranger file manager configuration and custom keybindings
 
 echo Configure GRUB dual boot
 echo /etc/default/grub
