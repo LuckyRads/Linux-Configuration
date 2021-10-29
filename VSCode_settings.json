@@ -1,0 +1,7 @@
+{
+    "vim.autoindent": true,
+    "vim.hlsearch": true,
+    "vim.ignorecase": true,
+    "vim.incsearch": true,
+    "vim.smartcase": true
+}
