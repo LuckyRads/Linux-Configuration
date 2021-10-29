@@ -3,6 +3,7 @@
 echo Installation content:
 echo Visual Studio Code
 echo Vim
+echo Copy .vimrc to ~/
 echo Postman
 echo JRE
 echo Eclipse
