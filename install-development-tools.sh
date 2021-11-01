@@ -2,6 +2,8 @@
 
 echo Installation content:
 echo Visual Studio Code
+echo Install vim extension
+echo copy vim settings to settings.json from VSCode_settings.json
 echo Vim
 echo Copy .vimrc to ~/
 echo Postman
