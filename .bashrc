@@ -158,9 +158,14 @@ bash_prompt_command() {
 		NEW_PWD=${NEW_PWD:$pwdoffset:$pwdmaxlen}
 		NEW_PWD=${trunc_symbol}/${NEW_PWD#*/}
 	fi
+
+	# Update git segment of the commmand line
+	generate_prompt_sections
+	define_separator_formatting
+	generate_separators
+
+	PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_GIT}${SEPARATOR_4}${PROMT_INPUT}"
 }
-
-
 
 
 ##
@@ -193,168 +198,110 @@ format_font()
 ## Get Git branch of current PWD
 ##
 parse_git_branch() {
-	GIT_BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')
+	git branch 2> /dev/null | grep '^*' | cut -c2-
+}
+
+##
+## Checks if the current directory is a git repository
+## returns: true or false
+##
+is_pwd_git_dir() {
+	local branch="$(parse_git_branch)"
+	local str_size=${#branch}
+
+	if [ $str_size -eq 0 ]
+	then
+		echo false
+		return
+	else
+		echo true
+		return
+	fi
 }
 
 
-##
-## COLORIZE BASH PROMT
-##
-bash_prompt() {
-
-	############################################################################
-	## COLOR CODES                                                            ##
-	## These can be used in the configuration below                           ##
-	############################################################################
-
+############################################################################
+## COLOR CODES                                                            ##
+## These can be used in the configuration below                           ##
+############################################################################
+define_color_codes() {
 	## FONT EFFECT
-	local      NONE='0'
-	local      BOLD='1'
-	local       DIM='2'
-	local UNDERLINE='4'
-	local     BLINK='5'
-	local    INVERT='7'
-	local    HIDDEN='8'
-
+	NONE='0'
+	BOLD='1'
+	DIM='2'
+	UNDERLINE='4'
+	BLINK='5'
+	INVERT='7'
+	HIDDEN='8'
 
 	## COLORS
-	local   DEFAULT='9'
-	local     BLACK='0'
-	local       RED='1'
-	local     GREEN='2'
-	local    YELLOW='3'
-	local      BLUE='4'
-	local   MAGENTA='5'
-	local      CYAN='6'
-	local    L_GRAY='7'
-	local    D_GRAY='60'
-	local     L_RED='61'
-	local   L_GREEN='62'
-	local  L_YELLOW='63'
-	local    L_BLUE='64'
-	local L_MAGENTA='65'
-	local    L_CYAN='66'
-	local     WHITE='67'
-
+	DEFAULT='9'
+     	BLACK='0'
+     	RED='1'
+     	GREEN='2'
+     	YELLOW='3'
+     	BLUE='4'
+     	MAGENTA='5'
+     	CYAN='6'
+     	L_GRAY='7'
+     	D_GRAY='60'
+     	L_RED='61'
+     	L_GREEN='62'
+     	L_YELLOW='63'
+     	L_BLUE='64'
+     	L_MAGENTA='65'
+     	L_CYAN='66'
+     	WHITE='67'
 
 	## TYPE
-	local     RESET='0'
-	local    EFFECT='0'
-	local     COLOR='30'
-	local        BG='40'
-
+	RESET='0'
+	EFFECT='0'
+	COLOR='30'
+     	BG='40'
 
 	## 256 COLOR CODES
-	local NO_FORMAT="\[\033[0m\]"
-	local ORANGE_BOLD="\[\033[1;38;5;208m\]"
-	local TOXIC_GREEN_BOLD="\[\033[1;38;5;118m\]"
-	local RED_BOLD="\[\033[1;38;5;1m\]"
-	local CYAN_BOLD="\[\033[1;38;5;87m\]"
-	local BLACK_BOLD="\[\033[1;38;5;0m\]"
-	local WHITE_BOLD="\[\033[1;38;5;15m\]"
-	local GRAY_BOLD="\[\033[1;90m\]"
-	local BLUE_BOLD="\[\033[1;38;5;74m\]"
+	NO_FORMAT="\[\033[0m\]"
+	ORANGE_BOLD="\[\033[1;38;5;208m\]"
+	TOXIC_GREEN_BOLD="\[\033[1;38;5;118m\]"
+	RED_BOLD="\[\033[1;38;5;1m\]"
+	CYAN_BOLD="\[\033[1;38;5;87m\]"
+	BLACK_BOLD="\[\033[1;38;5;0m\]"
+	WHITE_BOLD="\[\033[1;38;5;15m\]"
+	GRAY_BOLD="\[\033[1;90m\]"
+	BLUE_BOLD="\[\033[1;38;5;74m\]"
+}
 
 
+############################################################################
+## CONFIGURATION                                                          ##
+## Choose your color combination here                                     ##
+############################################################################	
+define_color_combos() {
+	FONT_COLOR_1=$WHITE
+	BACKGROUND_1=$BLUE
+	TEXTEFFECT_1=$BOLD
+
+	FONT_COLOR_2=$WHITE
+	BACKGROUND_2=$L_BLUE
+	TEXTEFFECT_2=$BOLD
+
+	FONT_COLOR_3=$D_GRAY
+        BACKGROUND_3=$WHITE
+        TEXTEFFECT_3=$BOLD
+             
+        FONT_COLOR_4=$WHITE
+	BACKGROUND_4=$MAGENTA
+	TEXTEFFECT_4=$BOLD
+
+	PROMT_FORMAT=$BLUE_BOLD
+}
 
 
-	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-	  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-
-
-
-	##                          CONFIGURE HERE                                ##
-
-
-
-	############################################################################
-	## CONFIGURATION                                                          ##
-	## Choose your color combination here                                     ##
-	############################################################################
-	local FONT_COLOR_1=$WHITE
-	local BACKGROUND_1=$BLUE
-	local TEXTEFFECT_1=$BOLD
-
-	local FONT_COLOR_2=$WHITE
-	local BACKGROUND_2=$L_BLUE
-	local TEXTEFFECT_2=$BOLD
-
-	local FONT_COLOR_3=$D_GRAY
-	local BACKGROUND_3=$WHITE
-	local TEXTEFFECT_3=$BOLD
-
-	local FONT_COLOR_4=$WHITE
-	local BACKGROUND_4=$MAGENTA
-	local TEXTEFFECT_4=$BOLD
-
-	local PROMT_FORMAT=$BLUE_BOLD
-
-
-	############################################################################
-	## EXAMPLE CONFIGURATIONS                                                 ##
-	## I use them for different hosts. Test them out ;)                       ##
-	############################################################################
-
-	## CONFIGURATION: BLUE-WHITE
-	if [ "$HOSTNAME" = dell ]; then
-		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLUE; TEXTEFFECT_1=$BOLD
-		FONT_COLOR_2=$WHITE; BACKGROUND_2=$L_BLUE; TEXTEFFECT_2=$BOLD
-		FONT_COLOR_3=$D_GRAY; BACKGROUND_3=$WHITE; TEXTEFFECT_3=$BOLD
-		PROMT_FORMAT=$CYAN_BOLD
-	fi
-
-	## CONFIGURATION: BLACK-RED
-	if [ "$HOSTNAME" = giraff6 ]; then
-		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLACK; TEXTEFFECT_1=$BOLD
-		FONT_COLOR_2=$WHITE; BACKGROUND_2=$D_GRAY; TEXTEFFECT_2=$BOLD
-		FONT_COLOR_3=$WHITE; BACKGROUND_3=$RED; TEXTEFFECT_3=$BOLD
-		PROMT_FORMAT=$RED_BOLD
-	fi
-
-	## CONFIGURATION: RED-BLACK
-	#FONT_COLOR_1=$WHITE; BACKGROUND_1=$RED; TEXTEFFECT_1=$BOLD
-	#FONT_COLOR_2=$WHITE; BACKGROUND_2=$D_GRAY; TEXTEFFECT_2=$BOLD
-	#FONT_COLOR_3=$WHITE; BACKGROUND_3=$BLACK; TEXTEFFECT_3=$BOLD
-	#PROMT_FORMAT=$RED_BOLD
-
-	## CONFIGURATION: CYAN-BLUE
-	if [ "$HOSTNAME" = sharkoon ]; then
-		FONT_COLOR_1=$BLACK; BACKGROUND_1=$L_CYAN; TEXTEFFECT_1=$BOLD
-		FONT_COLOR_2=$WHITE; BACKGROUND_2=$L_BLUE; TEXTEFFECT_2=$BOLD
-		FONT_COLOR_3=$WHITE; BACKGROUND_3=$BLUE; TEXTEFFECT_3=$BOLD
-		PROMT_FORMAT=$CYAN_BOLD
-	fi
-
-	## CONFIGURATION: GRAY-SCALE
-	if [ "$HOSTNAME" = giraff ]; then
-		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLACK; TEXTEFFECT_1=$BOLD
-		FONT_COLOR_2=$WHITE; BACKGROUND_2=$D_GRAY; TEXTEFFECT_2=$BOLD
-		FONT_COLOR_3=$WHITE; BACKGROUND_3=$L_GRAY; TEXTEFFECT_3=$BOLD
-		PROMT_FORMAT=$BLACK_BOLD
-	fi
-
-	## CONFIGURATION: GRAY-CYAN
-	if [ "$HOSTNAME" = light ]; then
-		FONT_COLOR_1=$WHITE; BACKGROUND_1=$BLACK; TEXTEFFECT_1=$BOLD
-		FONT_COLOR_2=$WHITE; BACKGROUND_2=$D_GRAY; TEXTEFFECT_2=$BOLD
-		FONT_COLOR_3=$BLACK; BACKGROUND_3=$L_CYAN; TEXTEFFECT_3=$BOLD
-		PROMT_FORMAT=$CYAN_BOLD
-	fi
-
-
-	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-	  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-	##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##
-
-
-
-
-	############################################################################
-	## TEXT FORMATING                                                         ##
-	## Generate the text formating according to configuration                 ##
-	############################################################################
-
+############################################################################
+## TEXT FORMATING                                                         ##
+## Generate the text formating according to configuration                 ##
+############################################################################
+define_text_formatting() {
 	## CONVERT CODES: add offset
 	FC1=$(($FONT_COLOR_1+$COLOR))
 	BG1=$(($BACKGROUND_1+$BG))
@@ -374,30 +321,35 @@ bash_prompt() {
 
 
 	## CALL FORMATING HELPER FUNCTION: effect + font color + BG color
-	local TEXT_FORMAT_1
-	local TEXT_FORMAT_2
-	local TEXT_FORMAT_3
-	local TEXT_FORMAT_4
 	format_font TEXT_FORMAT_1 $FE1 $FC1 $BG1
 	format_font TEXT_FORMAT_2 $FE2 $FC2 $BG2
 	format_font TEXT_FORMAT_3 $FC3 $FE3 $BG3
 	format_font TEXT_FORMAT_4 $FC4 $FE4 $BG4
+}
 
 
+generate_prompt_sections() {
 	# GENERATE PROMT SECTIONS
-	local PROMT_USER=$"$TEXT_FORMAT_1 \u "
-	local PROMT_HOST=$"$TEXT_FORMAT_2 \h "
-	local PROMT_PWD=$"$TEXT_FORMAT_3 \${NEW_PWD} "
-	local PROMT_GIT=$"$TEXT_FORMAT_4 \${GIT_BRANCH} "
-	local PROMT_INPUT=$"$PROMT_FORMAT "
+	PROMT_USER=$"$TEXT_FORMAT_1 \u "
+	PROMT_HOST=$"$TEXT_FORMAT_2 \h "
+	PROMT_PWD=$"$TEXT_FORMAT_3 \${NEW_PWD} "
+
+	if [[ $(is_pwd_git_dir) == "true" ]]; then
+		PROMT_GIT=$"$TEXT_FORMAT_4 \$(parse_git_branch) "
+	else
+		PROMT_GIT=$""
+	fi
+
+	PROMT_INPUT=$"$PROMT_FORMAT "
+}
 
 
-	############################################################################
-	## SEPARATOR FORMATING                                                    ##
-	## Generate the separators between sections                               ##
-	## Uses background colors of the sections                                 ##
-	############################################################################
-
+############################################################################
+## SEPARATOR FORMATING                                                    ##
+## Generate the separators between sections                               ##
+## Uses background colors of the sections                                 ##
+############################################################################
+define_separator_formatting() {
 	## CONVERT CODES
 	TSFC1=$(($BACKGROUND_1+$COLOR))
 	TSBG1=$(($BACKGROUND_2+$BG))
@@ -406,41 +358,53 @@ bash_prompt() {
 	TSBG2=$(($BACKGROUND_3+$BG))
 
 	TSFC3=$(($BACKGROUND_3+$COLOR))
-	#TSBG3=$(($DEFAULT+$BG))
-
-	get_dynamic_tsbg3() {
-		## Set background for PWD separator if current dir is a git repo
-		if [ -z "$GIT_BRANCH" ]
-		then
-			TSBG3=$(($BACKGROUND_4+$BG))
-		else
-			TSBG3=$(($DEFAULT+$BG))
-		fi
-	}
-
+	TSBG3_1=$(($DEFAULT+$BG))
+	TSBG3_2=$(($BACKGROUND_4+$BG))
 	
 	TSFC4=$(($BACKGROUND_4+$COLOR))
 	TSBG4=$(($DEFAULT+$BG))
 
 
 	## CALL FORMATING HELPER FUNCTION: effect + font color + BG color
-	local SEPARATOR_FORMAT_1
-	local SEPARATOR_FORMAT_2
-	local SEPARATOR_FORMAT_3
-	local SEPARATOR_FORMAT_4
 	format_font SEPARATOR_FORMAT_1 $TSFC1 $TSBG1
 	format_font SEPARATOR_FORMAT_2 $TSFC2 $TSBG2
-	format_font SEPARATOR_FORMAT_3 $TSFC3 $(get_dynamic_tsbg3)
+	
+	if [[ $(is_pwd_git_dir) == "true" ]]; then
+		format_font SEPARATOR_FORMAT_3 $TSFC3 $TSBG3_2
+	else
+		format_font SEPARATOR_FORMAT_3 $TSFC3 $TSBG3_1
+	fi
+
 	format_font SEPARATOR_FORMAT_4 $TSFC4 $TSBG4
+}
 
 
+generate_separators() {
 	# GENERATE SEPARATORS WITH FANCY TRIANGLE
-	local TRIANGLE=$'\uE0B0'
-	local SEPARATOR_1=$SEPARATOR_FORMAT_1$TRIANGLE
-	local SEPARATOR_2=$SEPARATOR_FORMAT_2$TRIANGLE
-	local SEPARATOR_3=$SEPARATOR_FORMAT_3$TRIANGLE
-	local SEPARATOR_4=$SEPARATOR_FORMAT_4$TRIANGLE
+	TRIANGLE=$'\uE0B0'
+	SEPARATOR_1=$SEPARATOR_FORMAT_1$TRIANGLE
+	SEPARATOR_2=$SEPARATOR_FORMAT_2$TRIANGLE
+	SEPARATOR_3=$SEPARATOR_FORMAT_3$TRIANGLE
 
+	if [[ $(is_pwd_git_dir) == "true" ]];then
+		SEPARATOR_4=$SEPARATOR_FORMAT_4$TRIANGLE
+	else
+		SEPARATOR_4=$SEPARATOR_FORMAT_4
+	fi
+}
+
+
+##
+## COLORIZE BASH PROMT
+##
+bash_prompt() {
+
+	define_color_codes
+	define_color_combos
+	define_text_formatting
+	generate_prompt_sections
+	define_separator_formatting
+	generate_separators
 
 
 	############################################################################
@@ -456,18 +420,15 @@ bash_prompt() {
 		;;
 	esac
 
+
+
+
 	############################################################################
 	## BASH PROMT                                                             ##
 	## Generate promt and remove format from the rest                         ##
 	############################################################################
 #	PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_INPUT}"
-if [ ! -n "$GIT_BRANCH" ]
-then
 	PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_GIT}${SEPARATOR_4}${PROMT_INPUT}"
-else
-		PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_INPUT}"
-fi
-
 
 	## For terminal line coloring, leaving the rest standard
 	none="$(tput sgr0)"
