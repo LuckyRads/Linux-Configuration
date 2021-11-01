@@ -269,6 +269,12 @@ define_color_codes() {
 	WHITE_BOLD="\[\033[1;38;5;15m\]"
 	GRAY_BOLD="\[\033[1;90m\]"
 	BLUE_BOLD="\[\033[1;38;5;74m\]"
+
+	## Symbols/Glyphs
+	TRIANGLE=$'\uE0B0'
+	GIT_SYMBOL=$'\uE0A0'
+	LOCK=$'\uE0A2'
+	SLIM_TRIANGLE=$'\uE0B1'
 }
 
 
@@ -289,7 +295,7 @@ define_color_combos() {
         BACKGROUND_3=$WHITE
         TEXTEFFECT_3=$BOLD
              
-        FONT_COLOR_4=$WHITE
+        FONT_COLOR_4=$L_CYAN
 	BACKGROUND_4=$MAGENTA
 	TEXTEFFECT_4=$BOLD
 
@@ -335,7 +341,7 @@ generate_prompt_sections() {
 	PROMT_PWD=$"$TEXT_FORMAT_3 \${NEW_PWD} "
 
 	if [[ $(is_pwd_git_dir) == "true" ]]; then
-		PROMT_GIT=$"$TEXT_FORMAT_4 \$(parse_git_branch) "
+		PROMT_GIT=$"$TEXT_FORMAT_4$GIT_SYMBOL\$(parse_git_branch) "
 	else
 		PROMT_GIT=$""
 	fi
@@ -380,15 +386,15 @@ define_separator_formatting() {
 
 
 generate_separators() {
-	# GENERATE SEPARATORS WITH FANCY TRIANGLE
-	TRIANGLE=$'\uE0B0'
+	# GENERATE SEPARATORS WITH FANCY TRIANGLE	
 	SEPARATOR_1=$SEPARATOR_FORMAT_1$TRIANGLE
 	SEPARATOR_2=$SEPARATOR_FORMAT_2$TRIANGLE
-	SEPARATOR_3=$SEPARATOR_FORMAT_3$TRIANGLE
 
 	if [[ $(is_pwd_git_dir) == "true" ]];then
+		SEPARATOR_3=$SEPARATOR_FORMAT_3$TRIANGLE
 		SEPARATOR_4=$SEPARATOR_FORMAT_4$TRIANGLE
 	else
+		SEPARATOR_3=$SEPARATOR_FORMAT_3$TRIANGLE
 		SEPARATOR_4=$SEPARATOR_FORMAT_4
 	fi
 }
