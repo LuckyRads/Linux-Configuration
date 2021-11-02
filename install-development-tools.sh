@@ -3,6 +3,7 @@
 echo Installation content:
 echo Visual Studio Code
 echo Install vim extension
+echo Install Cascadia Font PL for VSCode so that powerline symbols work
 echo copy vim settings to settings.json from VSCode_settings.json
 echo Vim
 echo Copy .vimrc to ~/
@@ -29,3 +30,4 @@ sudo ./GitAhead*.sh
 sudo ln -s /opt/GitAhead/GitAhead /usr/local/bin/GitAhead
 sudo chown -R root:root /opt/GitAhead
 sudo rm ./GitAhead*.sh
+sudo apt install fonts-cascadia-code
