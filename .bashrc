@@ -461,5 +461,8 @@ bash_prompt
 unset bash_prompt
 
 
+## Default commands to run after bash initialization
+## For example, you can run neofetch on each terminal startup
+neofetch
 
 ### EOF ###
