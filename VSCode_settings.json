@@ -1,4 +1,5 @@
 {
+    "terminal.integrated.fontFamily": "Cascadia Code PL",
     "vim.autoindent": true,
     "vim.hlsearch": true,
     "vim.ignorecase": true,
