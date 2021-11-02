@@ -24,7 +24,7 @@ echo Legion5 specific: change to Dedicated graphics in bios in order for the bri
 echo Terminator terminal
 echo Paste Terminator configuration file terminator_config to/as ~/.config/terminator/config
 echo Install fonts-powerline
-echo Paste from functions comment to EOF to the end of your .bashrc https://raw.githubusercontent.com/ChrisTitusTech/scripts/master/fancy-bash-promt.sh
+echo Paste from functions comment to EOF to the end of your .bashrc https://github.com/LuckyRads/Ubuntu-Configurator/blob/main/.bashrc
 
 sudo apt update
 
