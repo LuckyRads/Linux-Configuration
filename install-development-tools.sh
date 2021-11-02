@@ -20,6 +20,7 @@ sudo apt install default-jre
 sudo snap install --classic eclipse
 sudo apt install tor
 sudo apt install torbrowser-launcher
+sudo apt install fonts-cascadia-code
 
 # GitAhead installation
 sudo cp ./GitAhead*.sh /opt
@@ -30,4 +31,3 @@ sudo ./GitAhead*.sh
 sudo ln -s /opt/GitAhead/GitAhead /usr/local/bin/GitAhead
 sudo chown -R root:root /opt/GitAhead
 sudo rm ./GitAhead*.sh
-sudo apt install fonts-cascadia-code
