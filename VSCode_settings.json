@@ -4,5 +4,6 @@
     "vim.hlsearch": true,
     "vim.ignorecase": true,
     "vim.incsearch": true,
-    "vim.smartcase": true
+    "vim.smartcase": true,
+    "workbench.colorTheme": "One Dark Pro Darker"
 }
