@@ -1,0 +1,10 @@
+[Unit]
+Description=NZXT startup service
+
+[Service]
+Type=oneshot
+ExecStart=liquidctl set led1 color fixed "hsv(0,100,25)"
+
+[Install]
+WantedBy=default.target
+
