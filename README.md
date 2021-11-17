@@ -17,3 +17,7 @@ This repository contains all sorts of personal configuration scripts and install
 ## Disclaimer
 
 If you plan to use these scripts - do it at your own risk. Some of these are not properly tested and may break your system or just downright not work.
+
+## No discrimination
+
+In case you're using Windows 10, there's also a <a href="https://github.com/LuckyRads/Windows-Configuration">Windows Configuration repository</a> for my perfonal Windows 10 configuration. It does not contain any installation scripts, though.
