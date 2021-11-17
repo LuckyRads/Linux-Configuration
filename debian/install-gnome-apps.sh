@@ -4,11 +4,13 @@ echo This script will install: gnome tweak tools
 echo This script will install: dconf editor
 echo This script will install: Roboto fonts
 echo This script will install: Roboto fontsPowerline fonts
+echo This script will install: Papirus icon pack
 
 sudo apt install gnome-tweak-tool
 sudo apt install dconf-editor
 sudo apt install fonts-roboto
 sudo apt install fonts-powerline
+sudo apt install papirus-icon-theme
 
 echo The next part of this script is experimental.
 echo It will try to install various gnome shell extensions, etc.
