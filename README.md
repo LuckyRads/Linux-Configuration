@@ -20,4 +20,4 @@ If you plan to use these scripts - do it at your own risk. Some of these are not
 
 ## No discrimination
 
-In case you're using Windows 10, there's also a <a href="https://github.com/LuckyRads/Windows-Configuration">Windows Configuration repository</a> for my perfonal Windows 10 configuration. It does not contain any installation scripts, though.
+In case you're using Windows, there's also my personal <a href="https://github.com/LuckyRads/Windows-Configuration">Windows Configuration repository</a>. It does not contain any installation scripts, though.
