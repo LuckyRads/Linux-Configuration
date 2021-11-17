@@ -1,4 +1,4 @@
-# Linux-Configuration
+# Linux Configuration
 
 ## What's this?
 
