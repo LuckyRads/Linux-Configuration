@@ -13,3 +13,7 @@ This repository contains all sorts of personal configuration scripts and install
 - <code>images</code> contains some sample images of how the environment looks like
 - <code>themes</code> contains GTK themes (credit to the authors)
 - <code>app-installers</code> contains application installation scripts, packages (to be) and other application files that can not be installed with regular package managers
+
+## Disclaimer
+
+If you plan to use these scripts - do it at your own risk. Some of these are not properly tested and may break your system or just downright not work.
