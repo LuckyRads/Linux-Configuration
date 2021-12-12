@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ $(id -u) -ne 0 ]]; then
+    echo Please run this script as root.
+    exit
+fi
+
+echo This script will install the ZSH bash and all the required prerequisites.
+
+sudo apt update
+sudo apt install build-essential curl file git
+sudo apt install zsh
