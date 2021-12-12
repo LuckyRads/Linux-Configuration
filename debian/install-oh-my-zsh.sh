@@ -1,15 +1,13 @@
 #!/bin/bash
 
-if [[ $(id -u) -ne 0 ]]; then
-    echo Please run this script as root.
+if [[ $(id -u) == 0 ]]; then
+    echo Please run this script as non-root.
     exit
 fi
 
 echo This script will install oh-my-zsh and powerlevel10k theme.
 
 # oh-my-zsh installation
-sudo apt install git-core curl fonts-powerline
-
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # powerlevel10k theme installation
