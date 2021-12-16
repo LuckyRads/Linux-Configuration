@@ -12,6 +12,7 @@ This repository contains all sorts of personal configuration scripts and install
 - <code>configs</code> contains all sorts of configuration files for extensions, bash profiles and various other settings
 - <code>images</code> contains some sample images of how the environment looks like
 - <code>themes</code> contains GTK themes (credit to the authors)
+- <code>fonts</code> contains fonts which support various glyph symbols for the customized terminal (credit to the authors)
 - <code>app-installers</code> contains application installation scripts, packages (to be) and other application files that can not be installed with regular package managers
 
 ## Disclaimer
