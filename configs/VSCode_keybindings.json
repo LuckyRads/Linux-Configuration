@@ -161,5 +161,9 @@
     {
         "key": "ctrl+shift+,",
         "command": "editor.action.outdentLines"
+    },
+    {
+        "key": "shift+alt+\\",
+        "command": "eslint.executeAutofix"
     }
 ]
