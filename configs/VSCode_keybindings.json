@@ -214,5 +214,17 @@
     {
         "key": "shift+alt+q j",
         "command": "javaProjectExplorer.focus"
+    },
+    {
+        "key": "ctrl+alt+f5",
+        "command": "spring-boot-dashboard.localapp.debug-multiple"
+    },
+    {
+        "key": "shift+alt+q c",
+        "command": "workbench.debug.action.focusCallStackView"
+    },
+    {
+        "key": "ctrl+alt+f4",
+        "command": "spring-boot-dashboard.localapp.stop-multiple"
     }
 ]
