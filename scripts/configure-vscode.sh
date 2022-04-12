@@ -16,6 +16,13 @@ echo Prettier - code formatter
 echo One dark pro theme
 echo Bracket Pair Colorizer
 echo Docker
+echo Auto rename tag
+ecoh Code Spell Checker
+echo Git History
+echo GitLens
+echo Doki theme
+echo Tokyo night
+echo VSCode icons
 echo -------------
 echo -- Python --
 echo Python
@@ -26,5 +33,9 @@ echo -- JavaScript --
 echo ESlint
 echo ES7 React/Redux
 echo Debugger for firefox
+echo Beautify
+echo ESLint
+echo IntelliSense for CSS
+echo Regex reviewer
 echo ----------------
 echo 
