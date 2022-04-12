@@ -226,5 +226,13 @@
     {
         "key": "ctrl+alt+f4",
         "command": "spring-boot-dashboard.localapp.stop-multiple"
+    },
+    {
+        "key": "shift+alt+q v",
+        "command": "workbench.debug.action.focusVariablesView"
+    },
+    {
+        "key": "shift+alt+q b",
+        "command": "workbench.debug.action.focusBreakpointsView"
     }
 ]
