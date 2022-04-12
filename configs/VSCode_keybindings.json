@@ -19,7 +19,7 @@
         "command": "toggleVim"
     },
     {
-        "key": "shift+alt+n",
+        "key": "shift+alt+n f",
         "command": "explorer.newFile"
     },
     {
@@ -238,5 +238,17 @@
     {
         "key": "shift+alt+q w",
         "command": "workbench.debug.action.focusWatchView"
+    },
+    {
+        "key": "ctrl+shift+alt+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "shift+alt+n c",
+        "command": "java.view.package.newJavaClass"
+    },
+    {
+        "key": "shift+alt+n p",
+        "command": "java.view.package.newPackage"
     }
 ]
