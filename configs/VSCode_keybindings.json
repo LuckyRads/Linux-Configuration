@@ -202,5 +202,17 @@
     {
         "key": "ctrl+shift+delete",
         "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "shift+alt+q a",
+        "command": "spring-boot-dashboard.focus"
+    },
+    {
+        "key": "shift+alt+q o",
+        "command": "outline.focus"
+    },
+    {
+        "key": "shift+alt+q j",
+        "command": "javaProjectExplorer.focus"
     }
 ]
