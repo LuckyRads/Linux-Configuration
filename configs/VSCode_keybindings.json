@@ -234,5 +234,9 @@
     {
         "key": "shift+alt+q b",
         "command": "workbench.debug.action.focusBreakpointsView"
+    },
+    {
+        "key": "shift+alt+q w",
+        "command": "workbench.debug.action.focusWatchView"
     }
 ]
