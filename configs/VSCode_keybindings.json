@@ -198,5 +198,9 @@
     {
         "key": "ctrl+t",
         "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+shift+delete",
+        "command": "workbench.action.terminal.kill"
     }
 ]
