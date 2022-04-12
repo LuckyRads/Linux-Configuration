@@ -1,9 +1,86 @@
 {
-    "terminal.integrated.fontFamily": "Cascadia Code PL",
-    "vim.autoindent": true,
-    "vim.hlsearch": true,
-    "vim.ignorecase": true,
-    "vim.incsearch": true,
-    "vim.smartcase": true,
-    "workbench.colorTheme": "One Dark Pro Darker"
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Pylance",
+  "editor.columnSelection": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "java.project.importHint": false,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "C:\\Program Files\\Java\\jdk1.8.0_251"
+    },
+    {
+      "name": "JavaSE-11",
+      "path": "C:\\Program Files\\Java\\jdk-11.0.12"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Java\\jdk-17.0.2",
+      "default": true
+    }
+  ],
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "python.defaultInterpreterPath": "C:\\Users\\matas\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+  "sonarlint.rules": {
+    "Web:InputWithoutLabelCheck": {
+      "level": "on"
+    },
+    "Web:UnclosedTagCheck": {
+      "level": "on"
+    }
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.confirmSync": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "files.eol": "\n",
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "vim.autoindent": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "bracketPairColorizer.depreciation-notice": false,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.linkedEditing": true,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "redhat.telemetry.enabled": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\matas\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\""
 }
