@@ -216,7 +216,7 @@
         "command": "javaProjectExplorer.focus"
     },
     {
-        "key": "ctrl+alt+f5",
+        "key": "ctrl+shift+alt+f8",
         "command": "spring-boot-dashboard.localapp.debug-multiple"
     },
     {
@@ -224,7 +224,7 @@
         "command": "workbench.debug.action.focusCallStackView"
     },
     {
-        "key": "ctrl+alt+f4",
+        "key": "ctrl+shift+alt+f7",
         "command": "spring-boot-dashboard.localapp.stop-multiple"
     },
     {
@@ -250,5 +250,32 @@
     {
         "key": "shift+alt+n p",
         "command": "java.view.package.newPackage"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "-editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "editor.action.sourceAction"
+    },
+    {
+        "key": "shift+alt+q u",
+        "command": "workbench.action.output.toggleOutput",
+        "when": "workbench.panel.output.active"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "-workbench.action.output.toggleOutput",
+        "when": "workbench.panel.output.active"
+    },
+    {
+        "key": "shift+alt+q t",
+        "command": "workbench.view.extension.test"
+    },
+    {
+        "key": "ctrl+shift+alt+f12",
+        "command": "java.action.navigateToSuperImplementation"
     }
 ]
