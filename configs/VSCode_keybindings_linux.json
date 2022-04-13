@@ -293,5 +293,9 @@
     {
         "key": "shift+alt+q t",
         "command": "workbench.view.extension.test"
+    },
+    {
+        "key": "ctrl+shift+alt+f12",
+        "command": "java.action.navigateToSuperImplementation"
     }
 ]
