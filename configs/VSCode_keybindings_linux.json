@@ -297,5 +297,9 @@
     {
         "key": "ctrl+shift+alt+f12",
         "command": "java.action.navigateToSuperImplementation"
+    },
+    {
+        "key": "ctrl+; delete",
+        "command": "testing.clearTestResults"
     }
 ]
