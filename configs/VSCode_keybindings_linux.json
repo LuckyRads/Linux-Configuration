@@ -301,5 +301,13 @@
     {
         "key": "ctrl+; delete",
         "command": "testing.clearTestResults"
+    },
+    {
+        "key": "shift+alt+n n",
+        "command": "extension.advancedNewFile"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-extension.advancedNewFile"
     }
 ]
