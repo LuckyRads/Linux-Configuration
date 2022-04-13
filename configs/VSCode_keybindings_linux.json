@@ -275,5 +275,23 @@
         "key": "ctrl+shift+i",
         "command": "-editor.action.formatDocument.none",
         "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "editor.action.sourceAction"
+    },
+    {
+        "key": "shift+alt+q u",
+        "command": "workbench.action.output.toggleOutput",
+        "when": "workbench.panel.output.active"
+    },
+    {
+        "key": "ctrl+k ctrl+h",
+        "command": "-workbench.action.output.toggleOutput",
+        "when": "workbench.panel.output.active"
+    },
+    {
+        "key": "shift+alt+q t",
+        "command": "workbench.view.extension.test"
     }
 ]
