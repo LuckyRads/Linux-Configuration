@@ -309,6 +309,19 @@
   {
     "key": "ctrl+alt+n",
     "command": "-newFile.createNewFile"
+  },
+  {
+    "key": "ctrl+shift+alt+c",
+    "command": "-copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+c",
+    "command": "-java.view.package.copyRelativeFilePath",
+    "when": "focusedView == 'javaProjectExplorer' && java:serverMode == 'Standard'"
+  },
+  {
+    "key": "ctrl+shift+alt+c",
+    "command": "workbench.files.action.collapseExplorerFolders"
   }
 ]
-
