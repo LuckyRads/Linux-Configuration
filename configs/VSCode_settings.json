@@ -51,7 +51,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.confirmSync": false,
-  "editor.multiCursorModifier": "ctrlCmd",
   "files.eol": "\n",
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
   "vim.autoindent": true,
@@ -64,7 +63,15 @@
   "editor.linkedEditing": true,
   "vsicons.dontShowNewVersionMessage": true,
   "redhat.telemetry.enabled": false,
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\lucky\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\Matas\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
+  "debug.javascript.autoAttachFilter": "always",
+  "workbench.editor.wrapTabs": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "java.debug.settings.hotCodeReplace": "auto",
+  "javascript.preferences.importModuleSpecifier": "project-relative",
+  "typescript.preferences.importModuleSpecifier": "project-relative"
 }
