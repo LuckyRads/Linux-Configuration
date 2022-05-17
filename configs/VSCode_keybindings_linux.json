@@ -339,5 +339,13 @@
   {
     "key": "shift+alt+m c",
     "command": "notifications.clearAll"
+  },
+  {
+    "key": "ctrl+shift+alt+=",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "ctrl+shift+alt+-",
+    "command": "workbench.action.decreaseViewSize"
   }
 ]
