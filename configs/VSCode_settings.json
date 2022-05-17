@@ -73,5 +73,13 @@
   "editor.fontLigatures": true,
   "java.debug.settings.hotCodeReplace": "auto",
   "javascript.preferences.importModuleSpecifier": "project-relative",
-  "typescript.preferences.importModuleSpecifier": "project-relative"
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "window.zoomLevel": -1,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "java.import.generatesMetadataFilesAtProjectRoot": true,
+  "java.maven.downloadSources": true,
+  "java.maxConcurrentBuilds": 3,
+  "java.project.resourceFilters": ["node_modules", ".git"]
 }
