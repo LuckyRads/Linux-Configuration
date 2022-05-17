@@ -317,5 +317,9 @@
   {
     "key": "ctrl+shift+alt+-",
     "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "editor.action.blockComment"
   }
 ]
