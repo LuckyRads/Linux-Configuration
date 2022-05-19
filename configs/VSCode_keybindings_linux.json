@@ -351,5 +351,9 @@
   {
     "key": "ctrl+shift+/",
     "command": "editor.action.blockComment"
+  },
+  {
+    "key": "ctrl+shift+alt+'",
+    "command": "maptz.camelcasenavigation.toggleCamelMode"
   }
 ]
