@@ -356,7 +356,7 @@
     "key": "ctrl+shift+alt+'",
     "command": "maptz.camelcasenavigation.toggleCamelMode"
   },
-    {
+  {
     "key": "shift+alt+q d",
     "command": "github.cweijan.mysql.focus"
   },
