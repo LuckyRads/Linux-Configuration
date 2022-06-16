@@ -355,5 +355,25 @@
   {
     "key": "ctrl+shift+alt+'",
     "command": "maptz.camelcasenavigation.toggleCamelMode"
+  },
+    {
+    "key": "shift+alt+q d",
+    "command": "github.cweijan.mysql.focus"
+  },
+  {
+    "key": "shift+alt+q f",
+    "command": "dockerContainers.focus"
+  },
+  {
+    "key": "shift+alt+q g",
+    "command": "issuesAndMrs.focus"
+  },
+  {
+    "key": "shift+alt+pageup",
+    "command": "editor.action.moveCarretLeftAction"
+  },
+  {
+    "key": "shift+alt+pagedown",
+    "command": "editor.action.moveCarretRightAction"
   }
 ]
