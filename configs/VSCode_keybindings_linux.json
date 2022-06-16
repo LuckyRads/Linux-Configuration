@@ -375,5 +375,17 @@
   {
     "key": "shift+alt+pagedown",
     "command": "editor.action.moveCarretRightAction"
+  },
+  {
+    "key": "ctrl+shift+g ctrl+shift+s",
+    "command": "git.stage"
+  },
+  {
+    "key": "ctrl+shift+g ctrl+shift+u",
+    "command": "git.unstage"
+  },
+  {
+    "key": "shift+alt+q m",
+    "command": "mavenProjects.focus"
   }
 ]
