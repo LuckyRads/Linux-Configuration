@@ -81,5 +81,7 @@
   "java.import.generatesMetadataFilesAtProjectRoot": true,
   "java.maven.downloadSources": true,
   "java.maxConcurrentBuilds": 3,
-  "java.project.resourceFilters": ["node_modules", ".git"]
+  "java.project.resourceFilters": ["node_modules", ".git"],
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true
 }
