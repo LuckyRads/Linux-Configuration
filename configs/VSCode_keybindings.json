@@ -357,5 +357,9 @@
   {
     "key": "shift+alt+q m",
     "command": "mavenProjects.focus"
+  },
+  {
+    "key": "ctrl+shift+alt+5",
+    "command": "editor.emmet.action.matchTag"
   }
 ]
