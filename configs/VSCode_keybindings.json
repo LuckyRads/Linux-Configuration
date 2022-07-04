@@ -363,7 +363,7 @@
     "command": "editor.emmet.action.matchTag"
   },
   {
-    "key": "ctrl+alt+f5",
+    "key": "shift+alt+f6",
     "command": "workbench.action.debug.selectandstart"
   }
 ]
