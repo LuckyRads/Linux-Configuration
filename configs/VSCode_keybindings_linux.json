@@ -407,5 +407,9 @@
   {
     "key": "ctrl+shift+alt+5",
     "command": "editor.emmet.action.matchTag"
+  },
+  {
+    "key": "ctrl+alt+f5",
+    "command": "workbench.action.debug.selectandstart"
   }
 ]
