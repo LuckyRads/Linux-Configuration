@@ -369,5 +369,9 @@
   {
     "key": "ctrl+shift+alt+space",
     "command": "workbench.action.terminal.newWithProfile"
+  },
+  {
+    "key": "shift+alt+q n",
+    "command": "npm.focus"
   }
 ]
