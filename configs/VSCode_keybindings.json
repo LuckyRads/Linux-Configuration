@@ -365,5 +365,9 @@
   {
     "key": "shift+alt+f6",
     "command": "workbench.action.debug.selectandstart"
+  },
+  {
+    "key": "ctrl+shift+alt+space",
+    "command": "workbench.action.terminal.newWithProfile"
   }
 ]
