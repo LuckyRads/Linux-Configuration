@@ -419,5 +419,38 @@
   {
     "key": "shift+alt+q n",
     "command": "npm.focus"
+  },
+  {
+    "key": "ctrl+; c",
+    "command": "extension.runJest",
+    "when": "editorLangId == typescript"
+  },
+  {
+    "key": "ctrl+; f",
+    "command": "extension.runJestFile",
+    "when": "editorLangId == typescript"
+  },
+  {
+    "key": "ctrl+; ctrl+c",
+    "command": "extension.debugJest",
+    "when": "editorLangId == typescript"
+  },
+  {
+    "key": "ctrl+; a",
+    "command": "extension.runJestPath",
+    "when": "editorLangId == typescript"
+  },
+  {
+    "key": "ctrl+; ctrl+a",
+    "command": "extension.debugJestPath",
+    "when": "editorLangId == typescript"
+  },
+  {
+    "key": "shift+alt+q p",
+    "command": "projectsExplorerFavorites.focus"
+  },
+  {
+    "key": "shift+alt+q r",
+    "command": "workbench.view.remote"
   }
 ]
