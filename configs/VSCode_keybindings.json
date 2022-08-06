@@ -406,5 +406,25 @@
   {
     "key": "shift+alt+q r",
     "command": "workbench.view.remote"
+  },
+  {
+    "key": "shift+alt+w n",
+    "command": "remote-wsl.newWindow"
+  },
+  {
+    "key": "shift+alt+w d",
+    "command": "remote-wsl.newWindowForDistro"
+  },
+  {
+    "key": "shift+alt+w c",
+    "command": "remote-containers.reopenInWSL"
+  },
+  {
+    "key": "shift+alt+w f",
+    "command": "remote-wsl.explorer.openFolder"
+  },
+  {
+    "key": "shift+alt+w w",
+    "command": "remote-wsl.reopenInWindows"
   }
 ]
