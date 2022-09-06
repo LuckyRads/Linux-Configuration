@@ -426,5 +426,9 @@
   {
     "key": "shift+alt+w w",
     "command": "remote-wsl.reopenInWindows"
+  },
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "workbench.action.customizeLayout"
   }
 ]

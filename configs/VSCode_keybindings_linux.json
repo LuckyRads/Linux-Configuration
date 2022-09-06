@@ -452,5 +452,9 @@
   {
     "key": "shift+alt+q r",
     "command": "workbench.view.remote"
+  },
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "workbench.action.customizeLayout"
   }
 ]
