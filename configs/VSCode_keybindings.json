@@ -430,5 +430,30 @@
   {
     "key": "ctrl+shift+alt+l",
     "command": "workbench.action.customizeLayout"
+  },
+  {
+    "key": "shift+alt+e w",
+    "command": "errorLens.toggleWarning",
+    "when": "editorLangId != 'powershell'"
+  },
+  {
+    "key": "shift+alt+e t",
+    "command": "errorLens.toggle",
+    "when": "editorLangId != 'powershell'"
+  },
+  {
+    "key": "shift+alt+e e",
+    "command": "errorLens.toggleError",
+    "when": "editorLangId != 'powershell'"
+  },
+  {
+    "key": "shift+alt+e h",
+    "command": "errorLens.toggleHint",
+    "when": "editorLangId != 'powershell'"
+  },
+  {
+    "key": "shift+alt+e i",
+    "command": "errorLens.toggleInfo",
+    "when": "editorLangId != 'powershell'"
   }
 ]
