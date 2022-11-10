@@ -481,5 +481,25 @@
     "key": "shift+alt+e i",
     "command": "errorLens.toggleInfo",
     "when": "editorLangId != 'powershell'"
+  },
+  {
+    "key": "ctrl+g b",
+    "command": "gitlens.views.branches.focus"
+  },
+  {
+    "key": "ctrl+g c",
+    "command": "gitlens.views.commits.focus"
+  },
+  {
+    "key": "shift+alt+g",
+    "command": "references-view.findImplementations"
+  },
+  {
+    "key": "shift+alt+y",
+    "command": "java.action.showTypeHierarchy"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.goToTypeDefinition"
   }
 ]
