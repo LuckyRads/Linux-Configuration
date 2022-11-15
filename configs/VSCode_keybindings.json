@@ -475,5 +475,9 @@
   {
     "key": "shift+alt+j",
     "command": "editor.action.goToTypeDefinition"
+  },
+  {
+    "key": "ctrl+shift+g ctrl+shift+d",
+    "command": "git.clean"
   }
 ]
