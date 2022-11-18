@@ -479,5 +479,15 @@
   {
     "key": "ctrl+shift+g ctrl+shift+d",
     "command": "git.clean"
+  },
+  {
+    "key": "ctrl+shift+g ctrl+shift+r",
+    "command": "git.revertSelectedRanges",
+    "when": "isInDiffEditor"
+  },
+  {
+    "key": "ctrl+k ctrl+r",
+    "command": "-git.revertSelectedRanges",
+    "when": "isInDiffEditor"
   }
 ]
