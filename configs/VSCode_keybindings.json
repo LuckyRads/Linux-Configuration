@@ -457,11 +457,11 @@
     "when": "editorLangId != 'powershell'"
   },
   {
-    "key": "ctrl+g b",
+    "key": "ctrl+alt+g b",
     "command": "gitlens.views.branches.focus"
   },
   {
-    "key": "ctrl+g c",
+    "key": "ctrl+alt+g c",
     "command": "gitlens.views.commits.focus"
   },
   {
