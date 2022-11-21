@@ -515,5 +515,9 @@
     "key": "ctrl+k ctrl+r",
     "command": "-git.revertSelectedRanges",
     "when": "isInDiffEditor"
+  },
+  {
+    "key": "ctrl+alt+g t",
+    "command": "timeline.focus"
   }
 ]
