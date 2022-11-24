@@ -519,5 +519,21 @@
   {
     "key": "ctrl+alt+g t",
     "command": "timeline.focus"
+  },
+  {
+    "key": "shift+alt+delete",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+f4",
+    "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+f4",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+shift+alt+delete",
+    "command": "workbench.action.closeAllGroups"
   }
 ]
