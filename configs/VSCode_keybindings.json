@@ -509,5 +509,9 @@
   {
     "key": "ctrl+shift+alt+delete",
     "command": "workbench.action.closeAllGroups"
+  },
+  {
+    "key": "ctrl+alt+c c",
+    "command": "cmake.outline.focus"
   }
 ]
