@@ -515,7 +515,15 @@
     "command": "cmake.outline.focus"
   },
   {
-    "key": "shift+alt+q g"
+    "key": "shift+alt+q g",
     "command": "gradleDefaultProjectsView.focus"
+  },
+  {
+    "key": "ctrl+alt+=",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "ctrl+alt+-",
+    "command": "editor.action.fontZoomOut"
   }
 ]
