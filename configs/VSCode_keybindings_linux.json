@@ -328,7 +328,7 @@
     "key": "ctrl+shift+alt+m",
     "command": "workbench.action.minimizeOtherEditors"
   },
-    {
+  {
     "key": "shift+alt+m t",
     "command": "notifications.focusToasts"
   },
@@ -365,7 +365,7 @@
     "command": "dockerContainers.focus"
   },
   {
-    "key": "shift+alt+q g",
+    "key": "ctrl+alt+g g",
     "command": "issuesAndMrs.focus"
   },
   {
@@ -539,5 +539,9 @@
   {
     "key": "ctrl+alt+c c",
     "command": "cmake.outline.focus"
+  },
+  {
+    "key": "shift+alt+q g",
+    "command": "gradleDefaultProjectsView.focus"
   }
 ]
