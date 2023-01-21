@@ -1,27 +1,68 @@
 {
+  // ====================================================================
+  // Editor
+  // ====================================================================
   "diffEditor.ignoreTrimWhitespace": false,
-  "[html]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
-  "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.languageServer": "Pylance",
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.columnSelection": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "editor.suggestSelection": "first",
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.formatOnSaveMode": "modifications",
+  "editor.mouseWheelZoom": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.fontSize": 13,
+  "editor.accessibilitySupport": "off",
+  "errorLens.enabled": false,
+  "errorLens.enabledDiagnosticLevels": [
+    "info",
+    "hint",
+    "error"
+  ],
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
+  },
+  "cSpell.userWords": [
+    "dtype",
+    "matas",
+    "skybiometry"
+  ],
+  // ====================================================================
+  // IDE
+  // ====================================================================
+  "files.eol": "\n",
+  "git.confirmSync": false,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.tree.indent": 8,
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.wrapTabs": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "redhat.telemetry.enabled": false,
+  "scm.defaultViewMode": "tree",
+  "scm.showActionButton": false,
+  "gitlens.views.remotes.files.layout": "tree",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "tabnine.experimentalAutoImports": true,
+  "window.commandCenter": false,
+  "security.workspace.trust.enabled": false,
+  "files.watcherExclude": {
+    "**/node_modules/*/**": false
+  },
+  "search.exclude": {
+    "**/node_modules": false,
+    "**/target": false
   },
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
-  },
-  "java.project.importHint": false,
-  "[scss]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
   },
   "sonarlint.rules": {
     "Web:InputWithoutLabelCheck": {
@@ -31,9 +72,119 @@
       "level": "on"
     }
   },
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
+  "workbench.colorCustomizations": {
+    // "tree.indentGuidesStroke": "#6d6d6d"
+  },
+  "peacock.favoriteColors": [
+    {
+      "name": "Angular Red",
+      "value": "#dd0531"
+    },
+    {
+      "name": "Azure Blue",
+      "value": "#007fff"
+    },
+    {
+      "name": "JavaScript Yellow",
+      "value": "#f9e64f"
+    },
+    {
+      "name": "Mandalorian Blue",
+      "value": "#1857a4"
+    },
+    {
+      "name": "Node Green",
+      "value": "#215732"
+    },
+    {
+      "name": "React Blue",
+      "value": "#61dafb"
+    },
+    {
+      "name": "Something Different",
+      "value": "#832561"
+    },
+    {
+      "name": "Svelte Orange",
+      "value": "#ff3d00"
+    },
+    {
+      "name": "Vue Green",
+      "value": "#42b883"
+    }
+  ],
+  "projectManager.git.baseFolders": [
+    "C:\\Users\\matas\\Development",
+    "C:\\Users\\lucky\\Git",
+    "C:\\Users\\matas\\Git",
+    "/home/lucky/Git",
+    "/home/matas/Git"
+  ],
+  "window.zoomLevel": -1,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
+  },
+  // ====================================================================
+  // Vim
+  // ====================================================================
+  "vim.autoindent": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.startInInsertMode": false,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+  },
+  // ====================================================================
+  // Java / Spring
+  // ====================================================================
+  "java.project.importHint": false,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\Matas\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
+  // "java.import.generatesMetadataFilesAtProjectRoot": true,
+  "java.maven.downloadSources": true,
+  "java.maxConcurrentBuilds": 3,
+  "java.debug.settings.hotCodeReplace": "auto",
+  "java.debug.settings.showHex": false,
+  "java.debug.settings.showStaticVariables": false,
+  "java.debug.settings.showToString": false,
+  "java.debug.settings.showLogicalStructure": true,
+  "java.debug.settings.showQualifiedNames": true,
+  "boot-java.rewrite.reconcile": true,
+  "java.project.resourceFilters": [
+    "node_modules",
+    ".git"
+  ],
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+  },
+  // ====================================================================
+  // Javascript / Typescript / Html / CSS / React
+  // ====================================================================
+  "debug.javascript.autoAttachFilter": "onlyWithFlag",
+  "javascript.preferences.importModuleSpecifier": "project-relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "npm.keybindingsChangedWarningShown": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -45,43 +196,52 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "git.confirmSync": false,
-  "files.eol": "\n",
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
-  "vim.autoindent": true,
-  "vim.hlsearch": true,
-  "vim.ignorecase": true,
-  "vim.incsearch": true,
-  "vim.smartcase": true,
-  "workbench.colorTheme": "Dracula",
-  "workbench.iconTheme": "vscode-icons",
-  "editor.linkedEditing": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "redhat.telemetry.enabled": false,
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\Matas\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "debug.javascript.autoAttachFilter": "always",
-  "workbench.editor.wrapTabs": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "java.debug.settings.hotCodeReplace": "auto",
-  "javascript.preferences.importModuleSpecifier": "project-relative",
-  "typescript.preferences.importModuleSpecifier": "project-relative",
-  "window.zoomLevel": -1,
-  "[java]": {
-    "editor.defaultFormatter": "redhat.java"
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "java.import.generatesMetadataFilesAtProjectRoot": true,
-  "java.maven.downloadSources": true,
-  "java.maxConcurrentBuilds": 3,
-  "java.project.resourceFilters": ["node_modules", ".git"],
-  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-  "typescript.inlayHints.variableTypes.enabled": true
+  // ====================================================================
+  // Python
+  // ====================================================================
+  "python.languageServer": "Pylance",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  // ====================================================================
+  // Maven / Gradle
+  // ====================================================================
+  "gradle.showStoppedDaemons": true,
+  "[gradle]": {
+    "editor.defaultFormatter": "richardwillis.vscode-spotless-gradle",
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  // ====================================================================
+  // Docker
+  // ====================================================================
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  // ====================================================================
+  // Other
+  // ====================================================================
+  "cmake.configureOnOpen": true,
+  "sonarlint.connectedMode.connections.sonarqube": [
+    {
+      "serverUrl": "http://sentisight-test-pc:9999",
+      "connectionId": "SentiSight-TM-Sonar"
+    }
+  ],
 }
