@@ -525,5 +525,34 @@
   {
     "key": "ctrl+alt+-",
     "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "ctrl+alt+b d",
+    "command": "workbench.debug.viewlet.action.disableAllBreakpoints"
+  },
+  {
+    "key": "ctrl+alt+b e",
+    "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
+  },
+  {
+    "key": "ctrl+alt+b r",
+    "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "-java.action.clipboardPasteAction",
+    "when": "javaLSReady && editorLangId == 'java'"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "java.action.clipboardPasteAction"
+  },
+  {
+    "key": "shift+alt+q a",
+    "command": "spring.apps.focus"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "editor.action.toggleMinimap"
   }
 ]
