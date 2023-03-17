@@ -1,7 +1,7 @@
 require('plugins')
 
 -- Lucky's NVIM configuration properties
--- It must live in your home directory as ~/.config/nvim/init.lua
+-- It must live in your home directory as ~/.config/nvim/lua/init.lua
 
 -- ========== Pasting options ============
 
@@ -49,4 +49,21 @@ vim.opt.laststatus = 2
 
 -- Show line numbers on the sidebar
 vim.opt.number = true
+
+-- =============================================
+-- ==== Key mappings / global configuration ====
+
+local keymap = vim.api.nvim_set_keymap
+local default_opts = { noremap = true, silent = true }
+local expr_opts = { noremap = true, expr = true, silent = true }
+
+-- Remap the leader key to spcae
+vim.g.mapleader = ' '
+
+-- Custom key remaps
+
+keymap("n", "<C-p>", "<Cmd>FZF<CR>", default_opts)
+
+-- Color theme
+vim.g.colors_name = 'gloombuddy'
 

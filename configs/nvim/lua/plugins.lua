@@ -33,10 +33,24 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
+  -- Main plugins
   use 'wbthomason/packer.nvim' -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use 'sheerun/vim-polyglot'
+  use 'nvim-treesitter/nvim-treesitter' -- Tree sitter
+  use 'junegunn/fzf.vim' -- Fuzzy finder
+  use 'junegunn/fzf' -- Fuzzy finder
+  -- Language servers / debuggers
+  use 'mfussenegger/nvim-dap' -- Debug adapter protocol
+  use 'mfussenegger/nvim-jdtls' -- Eclipse language server support
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/completion-nvim'
+  use 'anott03/nvim-lspinstall'
+  -- Themes
+  use 'tjdevries/colorbuddy.nvim'
+  use 'bkegley/gloombuddy'
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -44,3 +58,4 @@ return packer.startup(function(use)
     require('packer').sync()
   end
 end)
+
