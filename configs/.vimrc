@@ -1,6 +1,15 @@
 " Lucky's VIM configuration properties
 " It must live in your home directory as ~/.vimrc
 
+" ============== Plugins ================
+
+call plug#begin()
+
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+call plug#end()
+
 " ========== Pasting options ============
 
 " Toggles pasting mode. What it essentially does is does not autoindent pasted text when toggled
@@ -47,3 +56,9 @@ set laststatus=2
 
 " Show line numbers on the sidebar
 set number
+
+" =======================================
+" ============ Keybindings ==============
+
+nnoremap <C-p> :FZF<CR>
+
