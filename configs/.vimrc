@@ -61,4 +61,5 @@ set number
 " ============ Keybindings ==============
 
 nnoremap <C-p> :FZF<CR>
+nnoremap tn :tabnew<CR>
 
