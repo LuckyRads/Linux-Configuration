@@ -63,6 +63,7 @@ vim.g.mapleader = ' '
 -- Custom key remaps
 
 keymap("n", "<C-p>", "<Cmd>FZF<CR>", default_opts)
+keymap("n", "tn", "<Cmd>:tabnew<CR>", default_opts)
 
 -- Color theme
 vim.g.colors_name = 'gloombuddy'
