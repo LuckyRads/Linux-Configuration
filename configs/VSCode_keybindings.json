@@ -554,5 +554,27 @@
   {
     "key": "ctrl+alt+p",
     "command": "editor.action.toggleMinimap"
+  },
+  {
+    "key": "ctrl+shift+alt+z",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "key": "ctrl+k z",
+    "command": "-workbench.action.toggleZenMode"
+  },
+  {
+    "key": "shift+alt+q e",
+    "command": "workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "key": "ctrl+k e",
+    "command": "-workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "key": "ctrl+shift+alt+f",
+    "command": "fuzzySearch.activeTextEditor"
   }
 ]
