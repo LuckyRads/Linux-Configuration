@@ -576,5 +576,9 @@
   {
     "key": "ctrl+shift+alt+f",
     "command": "fuzzySearch.activeTextEditor"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "editor.debug.action.selectionToRepl"
   }
 ]
