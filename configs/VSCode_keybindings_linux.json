@@ -604,7 +604,11 @@
     "command": "fuzzySearch.activeTextEditor"
   },
   {
-    "key": "ctrl+alt+d",
+    "key": "ctrl+alt+d e",
     "command": "editor.debug.action.selectionToRepl"
+  },
+  {
+    "key": "ctrl+alt+d c",
+    "command": "editor.debug.action.runToCursor"
   }
 ]
