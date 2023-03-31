@@ -610,5 +610,9 @@
   {
     "key": "ctrl+alt+d c",
     "command": "editor.debug.action.runToCursor"
+  },
+  {
+    "key": "shift+alt+v s",
+    "command": "workbench.action.closeAuxiliaryBar"
   }
 ]
