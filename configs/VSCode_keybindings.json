@@ -588,5 +588,9 @@
   {
     "key": "shift+alt+v s",
     "command": "workbench.action.closeAuxiliaryBar"
+  },
+  {
+    "key": "shift+alt+v p",
+    "command": "workbench.action.closeSidebar"
   }
 ]
