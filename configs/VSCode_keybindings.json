@@ -592,5 +592,9 @@
   {
     "key": "shift+alt+v p",
     "command": "workbench.action.closeSidebar"
+  },
+  {
+    "key": "shift+alt+q s",
+    "command": "workbench.panel.testResults.view.focus"
   }
 ]
