@@ -622,5 +622,9 @@
   {
     "key": "shift+alt+q s",
     "command": "workbench.panel.testResults.view.focus"
+  },
+  {
+    "key": "shift+alt+q l",
+    "command": "notes.focus"
   }
 ]
