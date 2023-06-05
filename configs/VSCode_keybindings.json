@@ -600,5 +600,9 @@
   {
     "key": "shift+alt+q l",
     "command": "notes.focus"
+  },
+  {
+    "key": "ctrl+shift+alt+t",
+    "command": "workbench.action.createTerminalEditor"
   }
 ]
