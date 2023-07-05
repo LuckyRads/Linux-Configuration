@@ -630,5 +630,9 @@
   {
     "key": "ctrl+shift+alt+t",
     "command": "workbench.action.createTerminalEditor"
+  },
+  {
+    "key": "shift+alt+q x",
+    "command": "solutionExplorer.focus"
   }
 ]
