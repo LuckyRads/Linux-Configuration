@@ -608,5 +608,17 @@
   {
     "key": "shift+alt+q x",
     "command": "solutionExplorer.focus"
+  },
+  {
+    "key": "ctrl+alt+g v",
+    "command": "gitlens.showGraphView"
+  },
+  {
+    "key": "ctrl+alt+g r",
+    "command": "gitlens.views.remotes.focus"
+  },
+  {
+    "key": "ctrl+alt+g d",
+    "command": "gitlens.showCommitDetailsView"
   }
 ]
