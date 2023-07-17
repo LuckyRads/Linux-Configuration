@@ -654,5 +654,21 @@
   {
     "key": "shift+alt+t p",
     "command": "workbench.action.terminal.moveToTerminalPanel"
+  },
+  {
+    "key": "shift+alt+t j",
+    "command": "workbench.action.terminal.join"
+  },
+  {
+    "key": "shift+alt+t shift+alt+left",
+    "command": "workbench.action.terminal.resizePaneLeft"
+  },
+  {
+    "key": "shift+alt+t shift+alt+right",
+    "command": "workbench.action.terminal.resizePaneRight"
+  },
+  {
+    "key": "shift+alt+t u",
+    "command": "workbench.action.terminal.unsplit"
   }
 ]
