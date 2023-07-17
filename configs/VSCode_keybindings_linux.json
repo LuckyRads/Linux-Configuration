@@ -646,5 +646,13 @@
   {
     "key": "ctrl+alt+g d",
     "command": "gitlens.showCommitDetailsView"
+  },
+  {
+    "key": "shift+alt+t e",
+    "command": "workbench.action.terminal.moveToEditor"
+  },
+  {
+    "key": "shift+alt+t p",
+    "command": "workbench.action.terminal.moveToTerminalPanel"
   }
 ]
