@@ -644,5 +644,15 @@
   {
     "key": "shift+alt+t u",
     "command": "workbench.action.terminal.unsplit"
+  },
+  {
+    "key": "ctrl+shift+g r",
+    "command": "git.stageSelectedRanges",
+    "when": "isInDiffEditor && !operationInProgress"
+  },
+  {
+    "key": "ctrl+k ctrl+alt+s",
+    "command": "-git.stageSelectedRanges",
+    "when": "isInDiffEditor && !operationInProgress"
   }
 ]
