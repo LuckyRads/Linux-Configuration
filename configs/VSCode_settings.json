@@ -14,9 +14,9 @@
   "editor.formatOnSaveMode": "modifications",
   "editor.mouseWheelZoom": true,
   "editor.inlineSuggest.enabled": true,
-  "editor.minimap.enabled": false,
-  "editor.fontSize": 13,
+  "editor.fontSize": 12.5,
   "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": false,
   "errorLens.enabled": false,
   "errorLens.enabledDiagnosticLevels": [
     "info",
@@ -34,13 +34,17 @@
   // ====================================================================
   // IDE
   // ====================================================================
+  "extensions.autoUpdate": false,
   "files.eol": "\n",
   "git.confirmSync": false,
-  "workbench.colorTheme": "GitHub Dark Dimmed",
-  "workbench.iconTheme": "vscode-icons",
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.iconTheme": "catppuccin-macchiato",
   "workbench.tree.indent": 8,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.editor.wrapTabs": true,
+  "workbench.editor.wrapTabs": false,
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "vsicons.dontShowNewVersionMessage": true,
   "redhat.telemetry.enabled": false,
   "scm.defaultViewMode": "tree",
@@ -48,9 +52,20 @@
   "gitlens.views.remotes.files.layout": "tree",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "tabnine.experimentalAutoImports": true,
-  "window.commandCenter": false,
+  "window.commandCenter": true,
   "security.workspace.trust.enabled": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "debug.toolBarLocation": "commandCenter",
+  "files.associations": {
+    "*.rmd": "markdown",
+    "*.properties": "spring-boot-properties",
+    "*.env.local": "dotenv",
+    ".env.local": "dotenv",
+    "*.env": "dotenv"
+  },
   "files.watcherExclude": {
     "**/node_modules/*/**": false
   },
@@ -73,8 +88,9 @@
     }
   },
   "workbench.colorCustomizations": {
-    // "tree.indentGuidesStroke": "#6d6d6d"
+    "tree.indentGuidesStroke": "#6d6d6d"
   },
+  "window.zoomLevel": -1.5,
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -120,12 +136,18 @@
     "/home/lucky/Git",
     "/home/matas/Git"
   ],
-  "window.zoomLevel": -1,
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
+    "yaml": true,
     "plaintext": true,
-    "markdown": false
+    "markdown": true
+  },
+  // "apc.imports": [
+  //   "C:/Users/matas/Development/open-source/Ubuntu-Configurator/configs/VSCode/rezise-quickinput-widget.js",
+  //   "/home/matas/open-source/Linux-Configuration/configs/VSCode/resize-quickinput-widget.js"
+  // ],
+  "apc.stylesheet": {
+    ".quick-input-widget": "width: 70% !important; left: 27% !important; margin-top: 10% !important; padding: 10px 10px 10px 10px",
   },
   // ====================================================================
   // Vim
@@ -140,13 +162,33 @@
     "<C-d>": true,
     "<C-s>": false,
     "<C-z>": false,
+    "<C-p>": false
   },
   // ====================================================================
   // Java / Spring
   // ====================================================================
   "java.project.importHint": false,
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\Matas\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
-  // "java.import.generatesMetadataFilesAtProjectRoot": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "C:\\Program Files\\Java\\jdk1.8.0_251"
+    },
+    {
+      "name": "JavaSE-11",
+      "path": "C:\\Program Files\\Java\\jdk-11.0.12"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Java\\jdk-17.0.2"
+    },
+    {
+      "name": "JavaSE-18",
+      "path": "C:\\Program Files\\Java\\jdk-18.0.2.1",
+      "default": true
+    }
+  ],
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"c:\\Users\\matas\\.vscode\\extensions\\gabrielbb.vscode-lombok-1.0.1\\server\\lombok.jar\"",
+  "java.import.generatesMetadataFilesAtProjectRoot": true,
   "java.maven.downloadSources": true,
   "java.maxConcurrentBuilds": 3,
   "java.debug.settings.hotCodeReplace": "auto",
@@ -155,7 +197,10 @@
   "java.debug.settings.showToString": false,
   "java.debug.settings.showLogicalStructure": true,
   "java.debug.settings.showQualifiedNames": true,
+  "spring-boot.ls.java.heap": "20G",
   "boot-java.rewrite.reconcile": true,
+  "boot-java.live-information.fetch-data.max-retries": 30,
+  "boot-java.scan-java-test-sources.on": true,
   "java.project.resourceFilters": [
     "node_modules",
     ".git"
@@ -186,6 +231,7 @@
   "[scss]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
+  "python.defaultInterpreterPath": "C:\\Users\\matas\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -213,12 +259,14 @@
     "jupyter-notebook": "left"
   },
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
   },
   // ====================================================================
   // Maven / Gradle
   // ====================================================================
   "gradle.showStoppedDaemons": true,
+  "java.import.gradle.java.home": "C:\\Program Files\\Java\\jdk-18.0.2.1",
   "[gradle]": {
     "editor.defaultFormatter": "richardwillis.vscode-spotless-gradle",
   },
@@ -235,8 +283,28 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   // ====================================================================
-  // Other
+  // Customizations
   // ====================================================================
+  "doki.wallpaper.enabled": true,
+  "doki.wallpaper.path": "D:/Images/Wallpapers/wp2324424-retrowave-wallpapers-transparent.png",
+  // ====================================================================
+  // Dart
+  // ====================================================================
+  "dart.sdkPath": "C:\\tools\\dart-sdk",
+  // ====================================================================
+  // Settings SYNC
+  // ====================================================================
+  "settingsSync.ignoredSettings": [
+    "doki.wallpaper.enabled",
+    "doki.wallpaper.path",
+    "sonarlint.connectedMode.connections.sonarqube",
+    "Notes.notesLocation",
+    "editor.fontSize",
+    "-window.zoomLevel"
+  ],
+  // ====================================================================
+  // Other
+  // ==================================================================== 
   "cmake.configureOnOpen": true,
   "sonarlint.connectedMode.connections.sonarqube": [
     {
@@ -244,4 +312,6 @@
       "connectionId": "SentiSight-TM-Sonar"
     }
   ],
+  "xml.server.vmargs": "-Xmx128M",
+  "Notes.notesLocation": "d:\\Documents\\Notes",
 }
