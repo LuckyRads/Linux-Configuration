@@ -45,7 +45,7 @@
     "command": "editor.debug.action.conditionalBreakpoint"
   },
   {
-    "key": "ctrl+shift+-",
+    "key": "ctrl+shift+[",
     "command": "editor.fold",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -60,7 +60,7 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+shift+=",
+    "key": "ctrl+shift+]",
     "command": "editor.unfold",
     "when": "editorTextFocus && foldingEnabled"
   },
@@ -202,10 +202,6 @@
   {
     "key": "ctrl+shift+delete",
     "command": "workbench.action.terminal.kill"
-  },
-  {
-    "key": "shift+alt+q a",
-    "command": "spring-boot-dashboard.focus"
   },
   {
     "key": "shift+alt+q o",
@@ -516,7 +512,7 @@
   },
   {
     "key": "shift+alt+q g",
-    "command": "gradleDefaultProjectsView.focus"
+    "command": "gradleTasksView.focus"
   },
   {
     "key": "ctrl+alt+=",
@@ -654,5 +650,13 @@
     "key": "ctrl+k ctrl+alt+s",
     "command": "-git.stageSelectedRanges",
     "when": "isInDiffEditor && !operationInProgress"
+  },
+  {
+    "key": "shift+alt+v r",
+    "command": "references-view.tree.focus"
+  },
+  {
+    "key": "ctrl+k ctrl+]",
+    "command": "editor.unfoldRecursively"
   }
 ]
